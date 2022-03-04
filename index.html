@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/loaders.css" />
+  <link rel="shortcut icon" href="./images/NASDAQ_icon.png" />
+  <title>Stock Exchange</title>
+</head>
+
+<body>
+  <div class="marquee-container">
+    <div id="marquee" class="marquee__inner" aria-hidden="true"></div>
+    <div id="marqueeLoader" class="marqueeLoader marqueeLoader-display">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="headline-title">
+    <h1>Search NASDAQ Stocks</h1>
+  </div>
+  <div id="searchBarContainer" class="search-bar-container">
+    <div id="inputBtnContainer" class="input-btn-container"></div>
+  </div>
+  <div id="resultsContainer" class="results-container">
+    <div id="loader" class="loader loader-display"></div>
+    <div id="showResults" class="show-results"></div>
+  </div>
+  <script src="./js/constants.js"></script>
+  <script src="./js/search_form.js"></script>
+  <script src="./js/show_results.js"></script>
+  <script src="./js/marquee.js"></script>
+  <script>
+    (async function () {
+      const newMarquee = new Marquee(document.getElementById("marquee"));
+      const searchForm = new SearchForm(document.getElementById("inputBtnContainer"));
+      const newShowResults = new ShowResults(document.getElementById("showResults"));
+      searchForm.onSearch((comp) => {
+        newShowResults.renderResults(comp);
+      });
+    })();
+  </script>
+</body>
+
+</html>

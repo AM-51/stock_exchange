@@ -1,0 +1,66 @@
+.loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #bd0000;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-display {
+  display: none;
+}
+
+.company-info-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* marquee loader */
+
+.marqueeLoader span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 0.5em;
+
+  margin: 0.19em;
+  background: #bd0000;
+  border-radius: 50%;
+  animation: loading 1s infinite alternate;
+}
+
+.marqueeLoader span:nth-of-type(2) {
+  background: #585858;
+  animation-delay: 0.2s;
+}
+.marqueeLoader span:nth-of-type(3) {
+  background: #a0a0a0;
+  animation-delay: 0.4s;
+}
+.marqueeLoader span:nth-of-type(4) {
+  background: #f1f1f1;
+  animation-delay: 0.6s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.marqueeLoader-display {
+  display: none;
+}

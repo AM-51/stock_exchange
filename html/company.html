@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/loaders.css" />
+    <link rel="stylesheet" href="../css/company.css" />
+    <title>Company Info</title>
+  </head>
+  <body>
+    <div id="companyInfoContainer" class="company-info-container">
+      <div id="headlineContainer" class="headline-container">
+        <div id="logoAndNameContainer" class="logo-and-name-container">
+          <img
+            id="companyLogo"
+            src=""
+            alt="Company Logo"
+            class="company-logo"
+          />
+          <a id="companyName" class="company-name"></a>
+        </div>
+        <div
+          id="priceAndPercentsContainer"
+          class="price-and-percents-container"
+        >
+          <span id="stockPrice" class="stock-price"></span
+          ><span id="percentage" class="percentage"></span>
+        </div>
+      </div>
+      <div id="loader" class="loader company-info-loader loader-display"></div>
+      <div id="companyDescription" class="company-description-container"></div>
+      <div id="chartContainer" class="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/constants.js"></script>
+    <script src="../js/company.js"></script>
+    <script src="../js/chart.js"></script>
+  </body>
+</html>
